@@ -47,4 +47,4 @@ jobs:
         run: pnpm exec vitest run
 
       - name: Package extension
-        run: pnpm exec vsce package --no-dependencies -o deepseek-for-github-copilot-chat.vsix
+        run: pnpm exec vsce package --no-dependencies -o deepseek-for-vscode-copilot-chat.vsix

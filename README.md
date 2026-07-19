@@ -2,7 +2,7 @@
 
 Bring **DeepSeek V4-Pro** and **DeepSeek V4-Flash** (1M context, selectable thinking effort) into GitHub Copilot Chat — with visible chain-of-thought, tool calling, and a live account-balance status bar.
 
-Install the Extension from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Dootmaan.deepseek-for-github-copilot-chat) or search `DeepSeek Models for GitHub Copilot Chat` in VSCode Extension Store.
+Install the Extension from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Dootmaan.deepseek-for-vscode-copilot-chat) or search `DeepSeek Models for GitHub Copilot Chat` in VSCode Extension Store.
 
 ![demo](https://api-docs.deepseek.com/img/v4-benchmark.png)
 

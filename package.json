@@ -1,5 +1,5 @@
 {
-	"name": "deepseek-for-github-copilot-chat",
+	"name": "deepseek-for-vscode-copilot-chat",
 	"displayName": "DeepSeek Models for GitHub Copilot Chat",
 	"description": "Bring DeepSeek V4-Pro and V4-Flash (1M context, selectable thinking effort) into GitHub Copilot Chat with visible thinking.",
 	"icon": "resources/icon.png",
