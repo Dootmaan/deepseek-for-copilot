@@ -5,3 +5,4 @@ dist/
 *.vsix
 .DS_Store
 *.env
+pnpm-workspace.yaml

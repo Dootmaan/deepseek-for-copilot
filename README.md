@@ -6,7 +6,7 @@ Install the Extension from [VSCode Marketplace](https://marketplace.visualstudio
 
 ![demo](https://api-docs.deepseek.com/img/v4-benchmark.png)
 
-This extension is modeled after [`glm-for-copilot`](https://github.com/Dootmaan/glm-for-copilot) and adapted for the Kimi (Moonshot AI) OpenAI-compatible API. Huge shout out to [@Dootmaan](https://github.com/Dootmaan) for his foundamental work and generous licensing.
+This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/glm-for-copilot) and adapted for the DeepSeek OpenAI-compatible API. Huge shout out to [@KiwiGaze](https://github.com/KiwiGaze) for his foundamental work and generous licensing.
 
 
 
