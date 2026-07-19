@@ -15,8 +15,8 @@ there.
 
 ## Ways to contribute
 
-- **Report a bug** — open a [Bug report](https://github.com/KiwiGaze/deepseek-for-copilot/issues/new?template=bug_report.yml).
-- **Request a feature** — open a [Feature request](https://github.com/KiwiGaze/deepseek-for-copilot/issues/new?template=feature_request.yml).
+- **Report a bug** — open a [Bug report](https://github.com/Dootmaan/deepseek-for-copilot/issues/new?template=bug_report.yml).
+- **Request a feature** — open a [Feature request](https://github.com/Dootmaan/deepseek-for-copilot/issues/new?template=feature_request.yml).
 - **Improve the docs** — typos, unclear wording, and missing details are all fair game.
 - **Submit code** — fix a bug or build a feature. For anything non-trivial, please open an
   issue first so we can agree on the approach before you invest time.

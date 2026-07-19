@@ -33,8 +33,8 @@ discussions — and when someone is representing the project in public.
 ## Enforcement
 
 If you experience or witness unacceptable behaviour, please report it privately to the project
-maintainer, [@KiwiGaze](https://github.com/KiwiGaze). For sensitive reports you may use the
-repository's [private reporting](https://github.com/KiwiGaze/deepseek-for-copilot/security/advisories/new)
+maintainer, [@Dootmaan](https://github.com/Dootmaan). For sensitive reports you may use the
+repository's [private reporting](https://github.com/Dootmaan/deepseek-for-copilot/security/advisories/new)
 channel. All reports will be reviewed promptly and fairly, and the maintainer will respect the
 privacy of the reporter.
 

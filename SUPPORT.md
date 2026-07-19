@@ -13,12 +13,12 @@ Thanks for using **DeepSeek Models for GitHub Copilot Chat**. Here is how to get
 ## Questions and discussion
 
 For "how do I…" questions and general discussion, open a
-[GitHub Discussion](https://github.com/KiwiGaze/deepseek-for-copilot/discussions).
+[GitHub Discussion](https://github.com/Dootmaan/deepseek-for-copilot/discussions).
 
 ## Bugs and feature requests
 
-- **Found a bug?** Open a [Bug report](https://github.com/KiwiGaze/deepseek-for-copilot/issues/new?template=bug_report.yml).
-- **Want a feature?** Open a [Feature request](https://github.com/KiwiGaze/deepseek-for-copilot/issues/new?template=feature_request.yml).
+- **Found a bug?** Open a [Bug report](https://github.com/Dootmaan/deepseek-for-copilot/issues/new?template=bug_report.yml).
+- **Want a feature?** Open a [Feature request](https://github.com/Dootmaan/deepseek-for-copilot/issues/new?template=feature_request.yml).
 
 ## DeepSeek API and account issues
 

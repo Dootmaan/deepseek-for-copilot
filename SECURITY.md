@@ -23,7 +23,7 @@ you configure (`api.deepseek.com` by default) over HTTPS.
 Please **do not** open a public issue for security vulnerabilities.
 
 Instead, report privately through GitHub's
-[private vulnerability reporting](https://github.com/KiwiGaze/deepseek-for-copilot/security/advisories/new):
+[private vulnerability reporting](https://github.com/Dootmaan/deepseek-for-copilot/security/advisories/new):
 
 1. Go to the **Security** tab of the repository.
 2. Click **Report a vulnerability**.

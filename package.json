@@ -8,13 +8,13 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/KiwiGaze/deepseek-for-copilot.git"
+		"url": "https://github.com/Dootmaan/deepseek-for-copilot.git"
 	},
 	"bugs": {
-		"url": "https://github.com/KiwiGaze/deepseek-for-copilot/issues"
+		"url": "https://github.com/Dootmaan/deepseek-for-copilot/issues"
 	},
-	"homepage": "https://github.com/KiwiGaze/deepseek-for-copilot#readme",
-	"qna": "https://github.com/KiwiGaze/deepseek-for-copilot/issues",
+	"homepage": "https://github.com/Dootmaan/deepseek-for-copilot#readme",
+	"qna": "https://github.com/Dootmaan/deepseek-for-copilot/issues",
 	"engines": {
 		"vscode": "^1.116.0",
 		"node": ">=20"
