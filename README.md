@@ -4,6 +4,10 @@ Bring **DeepSeek V4-Pro** and **DeepSeek V4-Flash** (1M context, selectable thin
 
 ![demo](https://api-docs.deepseek.com/img/v4-benchmark.png)
 
+This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/glm-for-copilot) and adapted for the Kimi (Moonshot AI) OpenAI-compatible API. Huge shout out to [@KiwiGaze](https://github.com/KiwiGaze) for his foundamental work and generous licensing.
+
+
+
 ## Highlights
 
 - 🧠 **Selectable thinking effort** — every model exposes a **None / High / Max** selector in the Copilot Chat model picker. DeepSeek's `reasoning_content` is forwarded to VS Code's thinking UI.

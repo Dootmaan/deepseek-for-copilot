@@ -4,7 +4,7 @@
 	"description": "Bring DeepSeek V4-Pro and V4-Flash (1M context, selectable thinking effort) into GitHub Copilot Chat with visible thinking.",
 	"icon": "resources/icon.png",
 	"version": "0.1.0",
-	"publisher": "yijiazhen-qi",
+	"publisher": "Dootmaan",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
