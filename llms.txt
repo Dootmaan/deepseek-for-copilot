@@ -1,0 +1,10 @@
+# DeepSeek Models for GitHub Copilot Chat
+
+- llms.txt index for AI coding agents
+- Base URL: https://api.deepseek.com
+- Auth: Bearer $DEEPSEEK_API_KEY
+- Models: deepseek-v4-pro, deepseek-v4-flash (1M context, 384K max output)
+- Thinking: { type: "enabled" | "disabled" } + reasoning_effort: "high" | "max"
+- CoT: returned as reasoning_content (must be passed back across tool-call turns)
+- Balance: GET /user/balance → { is_available, balance_infos[] }
+- See docs/deepseek-api.md for details

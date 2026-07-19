@@ -1,0 +1,88 @@
+name: Bug report
+description: Report something that is not working as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report. Please fill in the details below so we
+        can reproduce and fix the issue.
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I am on the latest version of the extension.
+          required: true
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps that trigger the bug.
+      placeholder: |
+        1. Set the model to '...'
+        2. Pick thinking effort '...'
+        3. Send '...'
+        4. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: endpoint
+    attributes:
+      label: Endpoint
+      options:
+        - Official (api.deepseek.com)
+        - Custom baseUrl / proxy
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Which DeepSeek model did you select in the picker?
+      placeholder: deepseek-v4-pro
+    validations:
+      required: true
+  - type: dropdown
+    id: thinking-effort
+    attributes:
+      label: Thinking effort
+      options:
+        - None
+        - High
+        - Max
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Run `DeepSeek: Show Logs` from the Command Palette and copy the relevant lines.
+        Logs contain request metadata but not prompt text — it is safe to paste them here.
+      render: shell
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+      placeholder: "1.116.0"
+    validations:
+      required: true
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      placeholder: "0.1.0"
+    validations:
+      required: true

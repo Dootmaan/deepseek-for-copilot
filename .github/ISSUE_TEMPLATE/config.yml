@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and discussion
+    url: https://github.com/KiwiGaze/deepseek-for-copilot/discussions
+    about: Ask "how do I…" questions and discuss ideas here.
+  - name: DeepSeek API documentation
+    url: https://api-docs.deepseek.com/
+    about: For DeepSeek API keys, billing, model availability, and rate limits (handled by DeepSeek, not this extension).

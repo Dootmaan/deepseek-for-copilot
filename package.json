@@ -1,0 +1,244 @@
+{
+	"name": "deepseek-for-github-copilot-chat",
+	"displayName": "DeepSeek Models for GitHub Copilot Chat",
+	"description": "Bring DeepSeek V4-Pro and V4-Flash (1M context, selectable thinking effort) into GitHub Copilot Chat with visible thinking.",
+	"icon": "resources/icon.png",
+	"version": "0.1.0",
+	"publisher": "yijiazhen-qi",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KiwiGaze/deepseek-for-copilot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/KiwiGaze/deepseek-for-copilot/issues"
+	},
+	"homepage": "https://github.com/KiwiGaze/deepseek-for-copilot#readme",
+	"qna": "https://github.com/KiwiGaze/deepseek-for-copilot/issues",
+	"engines": {
+		"vscode": "^1.116.0",
+		"node": ">=20"
+	},
+	"categories": [
+		"AI",
+		"Chat",
+		"Programming Languages"
+	],
+	"keywords": [
+		"deepseek",
+		"deepseek-v4-pro",
+		"deepseek-v4-flash",
+		"deepseek-reasoner",
+		"deepseek-chat",
+		"copilot",
+		"github copilot",
+		"copilot chat",
+		"byok",
+		"language model",
+		"thinking",
+		"reasoning",
+		"reasoning_effort",
+		"ai",
+		"chat"
+	],
+	"activationEvents": [
+		"onUri",
+		"onStartupFinished"
+	],
+	"enabledApiProposals": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languageModelChatProviders": [
+			{
+				"vendor": "deepseek",
+				"displayName": "DeepSeek"
+			}
+		],
+		"commands": [
+			{
+				"command": "deepseek-copilot.setApiKey",
+				"title": "%deepseek-copilot.command.setApiKey%"
+			},
+			{
+				"command": "deepseek-copilot.getApiKey",
+				"title": "%deepseek-copilot.command.getApiKey%"
+			},
+			{
+				"command": "deepseek-copilot.clearApiKey",
+				"title": "%deepseek-copilot.command.clearApiKey%"
+			},
+			{
+				"command": "deepseek-copilot.openSettings",
+				"title": "%deepseek-copilot.command.openSettings%"
+			},
+			{
+				"command": "deepseek-copilot.showLogs",
+				"title": "%deepseek-copilot.command.showLogs%"
+			},
+			{
+				"command": "deepseek-copilot.refreshUsage",
+				"title": "%deepseek-copilot.command.refreshUsage%"
+			},
+			{
+				"command": "deepseek-copilot.openUsageDetail",
+				"title": "%deepseek-copilot.command.openUsageDetail%"
+			}
+		],
+		"walkthroughs": [
+			{
+				"id": "deepseekGettingStarted",
+				"title": "%deepseek-copilot.walkthrough.title%",
+				"description": "%deepseek-copilot.walkthrough.description%",
+				"steps": [
+					{
+						"id": "setApiKey",
+						"title": "%deepseek-copilot.walkthrough.setApiKey.title%",
+						"description": "%deepseek-copilot.walkthrough.setApiKey.description%",
+						"media": {
+							"markdown": "resources/walkthrough/set-api-key.md"
+						},
+						"completionEvents": [
+							"onCommand:deepseek-copilot.setApiKey"
+						]
+					},
+					{
+						"id": "showModels",
+						"title": "%deepseek-copilot.walkthrough.showModels.title%",
+						"description": "%deepseek-copilot.walkthrough.showModels.description%",
+						"media": {
+							"markdown": "resources/walkthrough/show-models.md"
+						}
+					},
+					{
+						"id": "chooseThinkingEffort",
+						"title": "%deepseek-copilot.walkthrough.chooseThinkingEffort.title%",
+						"description": "%deepseek-copilot.walkthrough.chooseThinkingEffort.description%",
+						"media": {
+							"markdown": "resources/walkthrough/choose-thinking-effort.md"
+						}
+					}
+				]
+			}
+		],
+		"configuration": {
+			"title": "%deepseek-copilot.config.title%",
+			"properties": {
+				"deepseek-copilot.baseUrl": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "%deepseek-copilot.config.baseUrl.description%"
+				},
+				"deepseek-copilot.maxTokens": {
+					"type": "number",
+					"default": 0,
+					"minimum": 0,
+					"description": "%deepseek-copilot.config.maxTokens.description%"
+				},
+				"deepseek-copilot.maxRetries": {
+					"type": "integer",
+					"default": 3,
+					"minimum": 0,
+					"maximum": 10,
+					"markdownDescription": "%deepseek-copilot.config.maxRetries.description%"
+				},
+				"deepseek-copilot.modelIdOverrides": {
+					"type": "object",
+					"default": {},
+					"additionalProperties": {
+						"type": "string"
+					},
+					"markdownDescription": "%deepseek-copilot.config.modelIdOverrides.description%"
+				},
+				"deepseek-copilot.customModels": {
+					"type": "array",
+					"default": [],
+					"markdownDescription": "%deepseek-copilot.config.customModels.description%",
+					"items": {
+						"anyOf": [
+							{
+								"type": "string",
+								"description": "A DeepSeek API model id to add to the picker."
+							},
+							{
+								"type": "object",
+								"required": [
+									"id"
+								],
+								"additionalProperties": false,
+								"properties": {
+									"id": {
+										"type": "string",
+										"description": "API model id sent to DeepSeek (required)."
+									},
+									"name": {
+										"type": "string",
+										"description": "Display name in the model picker. Defaults to the id."
+									},
+									"maxInputTokens": {
+										"type": "number",
+										"description": "Max input tokens. Defaults to 1000000."
+									},
+									"maxOutputTokens": {
+										"type": "number",
+										"description": "Max output tokens. Defaults to 384000."
+									},
+									"toolCalling": {
+										"type": "boolean",
+										"description": "Whether the model supports tool calling. Defaults to true."
+									},
+									"vision": {
+										"type": "boolean",
+										"description": "Whether the model accepts image input. Defaults to false."
+									},
+									"thinking": {
+										"type": "boolean",
+										"description": "Whether the model supports thinking. Defaults to true."
+									}
+								}
+							}
+						]
+					}
+				},
+				"deepseek-copilot.debugLogging": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%deepseek-copilot.config.debugLogging.description%"
+				},
+				"deepseek-copilot.usageRefreshIntervalMinutes": {
+					"type": "number",
+					"default": 5,
+					"minimum": 1,
+					"maximum": 1440,
+					"markdownDescription": "%deepseek-copilot.config.usageRefreshIntervalMinutes.description%"
+				},
+				"deepseek-copilot.showUsageStatusBar": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%deepseek-copilot.config.showUsageStatusBar.description%"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "pnpm run compile",
+		"clean": "node -e \"require('node:fs').rmSync('out', { recursive: true, force: true })\"",
+		"compile": "pnpm run clean && tsc -p ./",
+		"typecheck": "tsc --noEmit -p ./",
+		"lint": "eslint .",
+		"watch": "tsc -watch -p ./",
+		"package": "vsce package -o dist/",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/node": "^20.0.0",
+		"@types/vscode": "^1.116.0",
+		"@vscode/vsce": "^3.2.0",
+		"eslint": "^10.5.0",
+		"globals": "^17.7.0",
+		"typescript": "^5.6.0",
+		"typescript-eslint": "^8.62.0",
+		"vitest": "^4.1.9"
+	}
+}

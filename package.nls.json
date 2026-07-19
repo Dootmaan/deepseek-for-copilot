@@ -1,0 +1,36 @@
+{
+  "deepseek-copilot.command.setApiKey": "DeepSeek: Set API Key",
+  "deepseek-copilot.command.getApiKey": "DeepSeek: Get API Key",
+  "deepseek-copilot.command.clearApiKey": "DeepSeek: Clear API Key",
+  "deepseek-copilot.command.openSettings": "DeepSeek: Open Settings",
+  "deepseek-copilot.command.showLogs": "DeepSeek: Show Logs",
+  "deepseek-copilot.command.refreshUsage": "DeepSeek: Refresh Usage",
+  "deepseek-copilot.command.openUsageDetail": "DeepSeek: Show Usage Details",
+
+  "deepseek-copilot.walkthrough.title": "DeepSeek Models for GitHub Copilot Chat",
+  "deepseek-copilot.walkthrough.description": "Set up DeepSeek models in GitHub Copilot Chat.",
+
+  "deepseek-copilot.walkthrough.setApiKey.title": "Set your DeepSeek API key",
+  "deepseek-copilot.walkthrough.setApiKey.description": "[Get an API key](command:deepseek-copilot.getApiKey) from platform.deepseek.com.\n[Set API Key](command:deepseek-copilot.setApiKey)",
+
+  "deepseek-copilot.walkthrough.showModels.title": "Show DeepSeek models in the picker",
+  "deepseek-copilot.walkthrough.showModels.description": "Your DeepSeek models appear in the Copilot Chat model picker. If they are hidden, open the Language Models manager to show them.\n[Open Language Models](command:workbench.action.chat.manage)",
+
+  "deepseek-copilot.walkthrough.chooseThinkingEffort.title": "Pick a thinking effort",
+  "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "Each model exposes a **Thinking Effort** selector in the picker: `None`, `High`, or `Max`. Pick `Max` for hard coding, `None` for the fastest, cheapest responses.\n[Open model picker](command:workbench.action.chat.modelPicker)",
+
+  "deepseek-copilot.config.title": "DeepSeek Models for GitHub Copilot Chat",
+
+  "deepseek-copilot.config.baseUrl.description": "Override the DeepSeek API base URL. When set, this value is used verbatim. Defaults to `https://api.deepseek.com`. Use this for self-hosted proxies or compatible third-party endpoints.",
+
+  "deepseek-copilot.config.maxTokens.description": "Maximum number of output tokens per request. Set to `0` to use the API default (no explicit limit). Useful for controlling costs.",
+
+  "deepseek-copilot.config.maxRetries.description": "Maximum automatic retries for transient chat failures (HTTP 429 rate limits and 5xx server errors), not counting the initial attempt. Set to `0` to disable automatic retries and fail fast. Retries wait with exponential backoff and honor the server's `Retry-After` header.",
+
+  "deepseek-copilot.config.modelIdOverrides.description": "Remap a built-in model's API id. Keys are the model id shown in the picker (e.g. `deepseek-v4-pro`); values are the id sent to the API. Use this for proxies that use different model names. To add brand-new models, use `customModels` instead.",
+  "deepseek-copilot.config.customModels.description": "Add your own DeepSeek models to the picker. Each entry is either a model id string (e.g. `\"deepseek-v4-pro\"`) or an object such as `{ \"id\": \"my-model\", \"name\": \"My Model\", \"maxInputTokens\": 1000000 }`. Custom models always appear and are sent to the active endpoint.",
+
+  "deepseek-copilot.config.debugLogging.description": "Enable verbose debug logging to the DeepSeek output channel. Use [`DeepSeek: Show Logs`](command:deepseek-copilot.showLogs) to view the channel. Logs may include request metadata but not prompt text.",
+  "deepseek-copilot.config.usageRefreshIntervalMinutes.description": "How often (in minutes) to refresh the DeepSeek usage status bar. Minimum 1, maximum 1440 (24 hours). Shows your account balance from `GET /user/balance`.",
+  "deepseek-copilot.config.showUsageStatusBar.description": "Show the DeepSeek usage status-bar item. Displays your account balance from `GET /user/balance`."
+}
