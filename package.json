@@ -14,7 +14,7 @@
 		"url": "https://github.com/Dootmaan/deepseek-for-copilot/issues"
 	},
 	"homepage": "https://github.com/Dootmaan/deepseek-for-copilot#readme",
-	"qna": "https://github.com/Dootmaan/deepseek-for-copilot/issues",
+	"qna": "https://github.com/Dootmaan/deepseek-for-copilot/discussions",
 	"engines": {
 		"vscode": "^1.116.0",
 		"node": ">=20"
