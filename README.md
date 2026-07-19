@@ -2,6 +2,8 @@
 
 Bring **DeepSeek V4-Pro** and **DeepSeek V4-Flash** (1M context, selectable thinking effort) into GitHub Copilot Chat — with visible chain-of-thought, tool calling, and a live account-balance status bar.
 
+Install the Extension from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Dootmaan.deepseek-for-github-copilot-chat) or search `DeepSeek Models for GitHub Copilot Chat` in VSCode Extension Store.
+
 ![demo](https://api-docs.deepseek.com/img/v4-benchmark.png)
 
 This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/glm-for-copilot) and adapted for the Kimi (Moonshot AI) OpenAI-compatible API. Huge shout out to [@KiwiGaze](https://github.com/KiwiGaze) for his foundamental work and generous licensing.
