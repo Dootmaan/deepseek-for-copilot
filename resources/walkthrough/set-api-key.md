@@ -1,6 +1,6 @@
 # Set Your DeepSeek API Key
 
-DeepSeek Models for GitHub Copilot Chat uses your own DeepSeek API key to make DeepSeek models available in the Copilot model picker.
+Deepseek Family for Github Copilot Chat uses your own DeepSeek API key to make DeepSeek models available in the Copilot model picker.
 
 Your key is stored in VS Code's SecretStorage (the OS keychain). It is never written to `settings.json` or your Git history.
 

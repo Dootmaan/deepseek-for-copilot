@@ -49,7 +49,7 @@ jobs:
           fi
 
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
-          echo "asset=dist/deepseek-for-vscode-copilot-chat-${VERSION}.vsix" >> "$GITHUB_OUTPUT"
+          echo "asset=dist/deepseek-for-github-copilot-chat-${VERSION}.vsix" >> "$GITHUB_OUTPUT"
 
       - name: Typecheck
         run: pnpm exec tsc -p ./ --noEmit

@@ -1,6 +1,6 @@
 {
-	"name": "deepseek-for-vscode-copilot-chat",
-	"displayName": "DeepSeek Models for GitHub Copilot Chat",
+	"name": "deepseek-family-for-github-copilot-chat",
+	"displayName": "DeepSeek Family for GitHub Copilot Chat",
 	"description": "Bring DeepSeek V4-Pro and V4-Flash (1M context, selectable thinking effort) into GitHub Copilot Chat with visible thinking.",
 	"icon": "resources/icon.png",
 	"version": "1.0.0",

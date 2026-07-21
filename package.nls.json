@@ -7,7 +7,7 @@
   "deepseek-copilot.command.refreshUsage": "DeepSeek: Refresh Usage",
   "deepseek-copilot.command.openUsageDetail": "DeepSeek: Show Usage Details",
 
-  "deepseek-copilot.walkthrough.title": "DeepSeek Models for GitHub Copilot Chat",
+  "deepseek-copilot.walkthrough.title": "Deepseek Family for Github Copilot Chat",
   "deepseek-copilot.walkthrough.description": "Set up DeepSeek models in GitHub Copilot Chat.",
 
   "deepseek-copilot.walkthrough.setApiKey.title": "Set your DeepSeek API key",
@@ -19,7 +19,7 @@
   "deepseek-copilot.walkthrough.chooseThinkingEffort.title": "Pick a thinking effort",
   "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "Each model exposes a **Thinking Effort** selector in the picker: `None`, `High`, or `Max`. Pick `Max` for hard coding, `None` for the fastest, cheapest responses.\n[Open model picker](command:workbench.action.chat.modelPicker)",
 
-  "deepseek-copilot.config.title": "DeepSeek Models for GitHub Copilot Chat",
+  "deepseek-copilot.config.title": "Deepseek Family for Github Copilot Chat",
 
   "deepseek-copilot.config.baseUrl.description": "Override the DeepSeek API base URL. When set, this value is used verbatim. Defaults to `https://api.deepseek.com`. Use this for self-hosted proxies or compatible third-party endpoints.",
 

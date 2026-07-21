@@ -1,6 +1,6 @@
 # Support
 
-Thanks for using **DeepSeek Models for GitHub Copilot Chat**. Here is how to get help.
+Thanks for using **Deepseek Family for Github Copilot Chat**. Here is how to get help.
 
 ## Before you ask
 

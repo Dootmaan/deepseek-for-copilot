@@ -11,7 +11,7 @@ let activeProvider: DeepSeekChatProvider | undefined;
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 	try {
-		logger.info('Activating DeepSeek Models for GitHub Copilot Chat');
+		logger.info('Activating Deepseek Family for Github Copilot Chat');
 		registerCommands(context);
 		registerActionUrls(context);
 		activeProvider = await registerProvider(context);

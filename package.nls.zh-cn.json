@@ -7,7 +7,7 @@
   "deepseek-copilot.command.refreshUsage": "DeepSeek: 刷新用量",
   "deepseek-copilot.command.openUsageDetail": "DeepSeek: 显示用量详情",
 
-  "deepseek-copilot.walkthrough.title": "DeepSeek Models for GitHub Copilot Chat",
+  "deepseek-copilot.walkthrough.title": "Deepseek Family for Github Copilot Chat",
   "deepseek-copilot.walkthrough.description": "在 GitHub Copilot Chat 中使用 DeepSeek 模型。",
 
   "deepseek-copilot.walkthrough.setApiKey.title": "设置 DeepSeek API 密钥",
@@ -19,7 +19,7 @@
   "deepseek-copilot.walkthrough.chooseThinkingEffort.title": "选择思考强度",
   "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "每个模型在选择器中都提供 **思考强度**（Thinking Effort）选项：`关闭`、`高`、`最高`。复杂编程选 `最高`，追求最快最省选 `关闭`。\n[打开模型选择器](command:workbench.action.chat.modelPicker)",
 
-  "deepseek-copilot.config.title": "DeepSeek Models for GitHub Copilot Chat",
+  "deepseek-copilot.config.title": "Deepseek Family for Github Copilot Chat",
 
   "deepseek-copilot.config.baseUrl.description": "覆盖 DeepSeek API 的基础 URL。设置后将直接使用此值，默认为 `https://api.deepseek.com`。适用于自托管代理或兼容的第三方端点。",
 

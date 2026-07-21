@@ -1,6 +1,6 @@
-# Contributing to DeepSeek Models for GitHub Copilot Chat
+# Contributing to Deepseek Family for Github Copilot Chat
 
-Thanks for your interest in improving **DeepSeek Models for GitHub Copilot Chat** — a VS Code extension that
+Thanks for your interest in improving **Deepseek Family for Github Copilot Chat** — a VS Code extension that
 brings DeepSeek V4-Pro and V4-Flash models into the GitHub Copilot Chat model picker. Contributions of
 all kinds are welcome: bug reports, feature requests, documentation fixes, and code.
 

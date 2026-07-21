@@ -1,4 +1,4 @@
-# DeepSeek Models for GitHub Copilot Chat
+# Deepseek Family for Github Copilot Chat
 
 - llms.txt index for AI coding agents
 - Base URL: https://api.deepseek.com
