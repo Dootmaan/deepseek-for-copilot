@@ -4,7 +4,7 @@ import type * as vscode from 'vscode';
 export type ThinkingMode = 'enabled' | 'disabled';
 
 /** DeepSeek reasoning effort levels (the OpenAI-compatible `reasoning_effort` field). */
-export type ThinkingEffort = 'none' | 'high' | 'max';
+export type ThinkingEffort = 'low' | 'high' | 'max';
 
 /** Picker spec describing how thinking-effort selection is presented. */
 export interface ThinkingEffortSpec {
@@ -117,7 +117,7 @@ export interface DeepSeekChatRequest {
 	tool_choice?: 'auto' | 'none';
 	max_tokens?: number;
 	thinking?: { type: ThinkingMode };
-	reasoning_effort?: Exclude<ThinkingEffort, 'none'>;
+	reasoning_effort?: ThinkingEffort;
 	stream_options?: { include_usage: boolean };
 }
 

@@ -21,7 +21,7 @@
 | Control | OpenAI-format parameter |
 | --- | --- |
 | Thinking toggle | `thinking: { type: "enabled" | "disabled" }` (defaults to **enabled**) |
-| Effort control | `reasoning_effort: "high" | "max"` (default `high`; `low`/`medium` → `high`, `xhigh` → `max`) |
+| Effort control | `reasoning_effort: "low" | "high" | "max"` (default `high`; `medium` → `high`, `xhigh` → `max`) |
 
 - Thinking mode **ignores** `temperature`, `top_p`, `presence_penalty`, `frequency_penalty`
   (passing them does not error, they simply have no effect).

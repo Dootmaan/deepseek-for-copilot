@@ -58,19 +58,23 @@ export async function prepareChatRequest({
 
 	/**
 	 * DeepSeek accepts both a `thinking.type` toggle (enabled/disabled, default enabled) and a
-	 * `reasoning_effort` selector (`high` or `max`). When the picker offers an effort menu we
-	 * honor it; otherwise we fall back to the user's global `thinking` setting-style toggle.
+	 * `reasoning_effort` selector (`low`/`high`/`max`).
+	 *
+	 * Compatibility note: older extension builds used `none` in the picker to mean
+	 * `thinking: disabled`. We still accept that legacy value and map it safely.
 	 */
 	const effortSpec = modelDef?.capabilities.thinkingEffort;
 	let thinkingFields: Pick<DeepSeekChatRequest, 'thinking' | 'reasoning_effort'> = {};
+	const thinkingMode = resolveThinking(options);
 	if (effortSpec) {
-		const effort = resolveEffort(options as EffortOptions, effortSpec);
-		thinkingFields =
-			effort === 'none'
-				? { thinking: { type: 'disabled' } }
-				: { thinking: { type: 'enabled' }, reasoning_effort: effort };
+		if (thinkingMode === 'disabled' || isLegacyDisabledEffort(options as EffortOptions)) {
+			thinkingFields = { thinking: { type: 'disabled' } };
+		} else {
+			const effort = resolveEffort(options as EffortOptions, effortSpec);
+			thinkingFields = { thinking: { type: 'enabled' }, reasoning_effort: effort };
+		}
 	} else if (isThinkingModel) {
-		thinkingFields = { thinking: { type: resolveThinking(options) } };
+		thinkingFields = { thinking: { type: thinkingMode } };
 	}
 
 	const request: DeepSeekChatRequest = {
@@ -87,13 +91,32 @@ export async function prepareChatRequest({
 }
 
 type EffortOptions = vscode.ProvideLanguageModelChatResponseOptions & {
-	readonly modelConfiguration?: { readonly reasoningEffort?: ThinkingEffort };
-	readonly configuration?: { readonly reasoningEffort?: ThinkingEffort };
+	readonly modelConfiguration?: { readonly reasoningEffort?: string };
+	readonly configuration?: { readonly reasoningEffort?: string };
 };
 
 function resolveEffort(options: EffortOptions, spec: ThinkingEffortSpec): ThinkingEffort {
 	const picked = options.modelConfiguration?.reasoningEffort ?? options.configuration?.reasoningEffort;
-	return picked && spec.levels.includes(picked) ? picked : spec.default;
+	const normalized = normalizeEffort(picked);
+	return normalized && spec.levels.includes(normalized) ? normalized : spec.default;
+}
+
+function normalizeEffort(value: string | undefined): ThinkingEffort | undefined {
+	if (value === 'medium') {
+		return 'high';
+	}
+	if (value === 'xhigh') {
+		return 'max';
+	}
+	if (value === 'low' || value === 'high' || value === 'max') {
+		return value;
+	}
+	return undefined;
+}
+
+function isLegacyDisabledEffort(options: EffortOptions): boolean {
+	const picked = options.modelConfiguration?.reasoningEffort ?? options.configuration?.reasoningEffort;
+	return picked === 'none';
 }
 
 /** Thinking mode from a per-request override (modelOptions), else the default (enabled). */

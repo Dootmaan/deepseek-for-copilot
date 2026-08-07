@@ -17,7 +17,7 @@
   "deepseek-copilot.walkthrough.showModels.description": "你的 DeepSeek 模型将出现在 Copilot Chat 的模型选择器中。如果看不到，请打开语言模型管理器以显示它们。\n[打开语言模型](command:workbench.action.chat.manage)",
 
   "deepseek-copilot.walkthrough.chooseThinkingEffort.title": "选择思考强度",
-  "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "每个模型在选择器中都提供 **思考强度**（Thinking Effort）选项：`关闭`、`高`、`最高`。复杂编程选 `最高`，追求最快最省选 `关闭`。\n[打开模型选择器](command:workbench.action.chat.modelPicker)",
+  "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "每个模型在选择器中都提供 **思考强度**（Thinking Effort）选项：`低`、`高`、`最高`。复杂编程选 `最高`，追求更快更省选 `低`。\n[打开模型选择器](command:workbench.action.chat.modelPicker)",
 
   "deepseek-copilot.config.title": "Deepseek Family for Github Copilot Chat",
 

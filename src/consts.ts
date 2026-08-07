@@ -68,14 +68,14 @@ export const URI_PATHS = {
 	showLogs: '/showLogs',
 } as const;
 
-/** DeepSeek reports both thinking levels through `reasoning_effort: high|max`. */
-const DEEPSEEK_EFFORT: ThinkingEffortSpec = { levels: ['none', 'high', 'max'], default: 'high' };
+/** DeepSeek reasoning effort now accepts `low`/`high`/`max` for v4 models. */
+const DEEPSEEK_EFFORT: ThinkingEffortSpec = { levels: ['low', 'high', 'max'], default: 'high' };
 
 /**
  * Built-in DeepSeek models exposed through the language model provider.
  *
  * Both v4-pro and v4-flash support a 1M context window and dual (thinking/non-thinking)
- * modes. Thinking effort is selectable per-request via the picker (none/high/max).
+ * modes. Thinking effort is selectable per-request via the picker (low/high/max).
  */
 export const MODELS: DeepSeekModel[] = [
 	{

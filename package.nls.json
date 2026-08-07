@@ -17,7 +17,7 @@
   "deepseek-copilot.walkthrough.showModels.description": "Your DeepSeek models appear in the Copilot Chat model picker. If they are hidden, open the Language Models manager to show them.\n[Open Language Models](command:workbench.action.chat.manage)",
 
   "deepseek-copilot.walkthrough.chooseThinkingEffort.title": "Pick a thinking effort",
-  "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "Each model exposes a **Thinking Effort** selector in the picker: `None`, `High`, or `Max`. Pick `Max` for hard coding, `None` for the fastest, cheapest responses.\n[Open model picker](command:workbench.action.chat.modelPicker)",
+  "deepseek-copilot.walkthrough.chooseThinkingEffort.description": "Each model exposes a **Thinking Effort** selector in the picker: `Low`, `High`, or `Max`. Pick `Max` for hard coding, `Low` for faster and cheaper responses.\n[Open model picker](command:workbench.action.chat.modelPicker)",
 
   "deepseek-copilot.config.title": "Deepseek Family for Github Copilot Chat",
 

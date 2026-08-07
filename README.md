@@ -4,6 +4,8 @@ Bring **DeepSeek V4-Pro** and **DeepSeek V4-Flash** (1M context, selectable thin
 
 Install the Extension from [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Dootmaan.deepseek-family-for-github-copilot-chat) or search `DeepSeek Family for GitHub Copilot Chat` in VSCode Extension Store.
 
+> **What's new in 1.0.1** — fixed compatibility with the latest DeepSeek V4 API: the Thinking Effort selector now uses the official `Low` / `High` / `Max` values, and legacy `None` / `medium` / `xhigh` configs are mapped automatically so requests to `deepseek-v4-pro` and `deepseek-v4-flash` work again. See the [changelog](CHANGELOG.md).
+
 ![demo](https://api-docs.deepseek.com/img/v4-benchmark.png)
 
 This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/glm-for-copilot) and adapted for the DeepSeek OpenAI-compatible API. Huge shout out to [@KiwiGaze](https://github.com/KiwiGaze) for his foundamental work and generous licensing.
@@ -12,7 +14,7 @@ This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/
 
 ## Highlights
 
-- 🧠 **Selectable thinking effort** — every model exposes a **None / High / Max** selector in the Copilot Chat model picker. DeepSeek's `reasoning_content` is forwarded to VS Code's thinking UI.
+- 🧠 **Selectable thinking effort** — every model exposes a **Low / High / Max** selector in the Copilot Chat model picker. DeepSeek's `reasoning_content` is forwarded to VS Code's thinking UI.
 - 🚀 **Two flagship models** — `deepseek-v4-pro` (1.6T MoE, 49B active) and `deepseek-v4-flash` (284B MoE, 13B active). Both ship a 1M context window and 384K max output.
 - 🛠️ **Full Copilot Chat integration** — tool calling, multi-turn reasoning preservation (passes `reasoning_content` back across tool-call turns to avoid the 400), and proper `tool_choice` handling.
 - 🔐 **Bring-your-own-key** — your key lives in VS Code's SecretStorage (the OS keychain). Never written to `settings.json` or Git.
@@ -25,7 +27,7 @@ This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/
 2. Create a key at <https://platform.deepseek.com/api_keys>.
 3. Run **DeepSeek: Set API Key** from the Command Palette and paste the key.
 4. Open Copilot Chat, click the model picker, and pick **DeepSeek V4-Pro** or **DeepSeek V4-Flash**.
-5. (Optional) Use the per-model **Thinking Effort** selector to choose `None`, `High`, or `Max`.
+5. (Optional) Use the per-model **Thinking Effort** selector to choose `Low`, `High`, or `Max`.
 
 ## Settings
 
@@ -56,13 +58,13 @@ This extension is modeled after [`glm-for-copilot`](https://github.com/KiwiGaze/
 
 | Picker value | Wire body |
 | --- | --- |
-| **None** | `thinking: { type: "disabled" }` |
+| **Low** | `thinking: { type: "enabled" }, reasoning_effort: "low"` |
 | **High** | `thinking: { type: "enabled" }, reasoning_effort: "high"` |
 | **Max** | `thinking: { type: "enabled" }, reasoning_effort: "max"` |
 
 DeepSeek's default is **High**. Picking **Max** is recommended for hard coding and agentic tasks
-(as Claude Code and OpenCode do automatically). **None** skips the chain-of-thought entirely for
-the fastest, cheapest responses.
+(as Claude Code and OpenCode do automatically). To skip chain-of-thought entirely, set
+`thinking: disabled` (legacy `None` configs are still mapped for compatibility).
 
 See [docs/deepseek-api.md](docs/deepseek-api.md) for the full API reference.
 

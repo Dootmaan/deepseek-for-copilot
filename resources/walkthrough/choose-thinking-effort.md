@@ -4,7 +4,7 @@ Each DeepSeek model exposes a **Thinking Effort** selector in the model picker:
 
 | Effort | When to use |
 | --- | --- |
-| **None** | Fastest, lowest cost — disables chain-of-thought entirely |
+| **Low** | Lighter reasoning — faster and cheaper |
 | **High** | Balanced reasoning (default) |
 | **Max** | Deepest reasoning — best for hard coding, math, agentic tasks (uses more tokens) |
 

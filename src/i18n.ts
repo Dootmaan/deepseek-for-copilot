@@ -23,8 +23,8 @@ const en: Record<string, string> = {
 
 	// Thinking effort control
 	'effort.title': 'Thinking Effort',
-	'effort.none.label': 'None',
-	'effort.none.desc': 'Disable thinking — fastest, lowest cost',
+	'effort.low.label': 'Low',
+	'effort.low.desc': 'Lighter reasoning — fastest within thinking mode',
 	'effort.high.label': 'High',
 	'effort.high.desc': 'Balanced reasoning (default, recommended)',
 	'effort.max.label': 'Max',
@@ -120,8 +120,8 @@ const zh: Record<string, string> = {
 	'auth.notConfigured': '尚未配置 DeepSeek API Key。请在命令面板运行“DeepSeek: Set API Key”。',
 
 	'effort.title': '思考强度',
-	'effort.none.label': '关闭',
-	'effort.none.desc': '不进行思考——最快、消耗最低',
+	'effort.low.label': '低',
+	'effort.low.desc': '较轻推理——在思考模式下速度更快',
 	'effort.high.label': '高',
 	'effort.high.desc': '均衡推理（默认，推荐）',
 	'effort.max.label': '最高',
