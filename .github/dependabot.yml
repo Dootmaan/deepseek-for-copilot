@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: deps
+    ignore:
+      # @types/node must track engines.node (currently >= 20).
+      # Ignore major bumps so types can't drift ahead of the declared runtime.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      # Type-only dev dependency; ignore major bumps so types track the
+      # declared API surface (engines.vscode ^1.116.0) without PR noise.
+      - dependency-name: "@types/vscode"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: ci

@@ -1,0 +1,12 @@
+# Deepseek Family for Github Copilot Chat
+
+- llms.txt index for AI coding agents
+- Base URL: https://api.deepseek.com
+- Auth: Bearer $DEEPSEEK_API_KEY
+- Models: deepseek-flash, deepseek-v4-pro (1M context, 384K max output)
+- Compatibility aliases: deepseek-v4-flash, deepseek-v4-flash-vision-exp temporarily route to deepseek-flash
+- Thinking: { type: "enabled" | "disabled" } + reasoning_effort: "none" | "low" | "high" | "max"
+- Vision: deepseek-flash accepts JPEG, PNG, GIF, WebP images in user messages via Chat Completions content blocks
+- CoT: returned as reasoning_content (must be passed back across tool-call turns)
+- Balance: GET /user/balance → { is_available, balance_infos[] }
+- See docs/deepseek-api.md for details
