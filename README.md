@@ -79,7 +79,7 @@ both normalize to **High**.
 - DeepSeek only accepts images in `user` messages, not `system`, `assistant`, or `tool` messages.
 - Supported image formats are JPEG, PNG, GIF, and WebP.
 - DeepSeek's retired ids `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` are temporarily routed by the backend to `deepseek-flash`.
-- According to the latest pricing page, `deepseek-v4-pro` does **not** expose image understanding as a first-class capability; DeepSeek plans to route it to V4.1 Flash after 2026-09-14 12:00 Beijing time until V4.1 Pro is released.
+- According to the latest pricing page, `deepseek-v4-pro` does **not** expose image understanding as a first-class capability. DeepSeek announced on 2026-10-17 that V4 Pro service continues after 2026-09-14 with unchanged billing.
 
 ## Pricing in the extension
 
@@ -87,6 +87,8 @@ both normalize to **High**.
 - The panel lists **off-peak** and **peak** unit prices for input (cache hit), input (cache miss), and output, all per 1M tokens.
 - In Chinese UI, prices are shown in **CNY** using the official Chinese pricing page.
 - In English UI, prices are shown in **USD** using the official English pricing page.
+- `deepseek-flash` always serves the latest V4.1 Flash release — currently **DeepSeek-V4.1-Flash-1017** (2026-10-17 update; calling method and pricing unchanged).
+- Peak hours exclude Chinese public holidays; weekends and holidays are off-peak in full.
 - DeepSeek updates pricing frequently, so the panel includes a source note and routing note for retired ids.
 
 See [docs/deepseek-api.md](docs/deepseek-api.md) for the full API reference.

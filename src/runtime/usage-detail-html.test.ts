@@ -98,8 +98,8 @@ describe('buildUsageMessage', () => {
 		expect(msg?.pricing.unit).toBe('USD / 1M tokens');
 		expect(msg?.pricing.models[0]).toMatchObject({
 			id: 'deepseek-flash',
-			offPeak: { inputCacheHit: '$0.007', inputCacheMiss: '$0.22', output: '$0.66' },
-			peak: { inputCacheHit: '$0.014', inputCacheMiss: '$0.44', output: '$1.32' },
+			offPeak: { inputCacheHit: '$0.003', inputCacheMiss: '$0.15', output: '$0.6' },
+			peak: { inputCacheHit: '$0.006', inputCacheMiss: '$0.3', output: '$1.2' },
 		});
 	});
 

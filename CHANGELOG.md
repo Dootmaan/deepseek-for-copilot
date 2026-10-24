@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Aligned the language model provider contribution with the latest Copilot Chat conventions: the DeepSeek entry in the model picker's provider list now exposes a manage-models action through `managementCommand`, opening the extension settings directly from Copilot Chat.
 - Confirmed compatibility with VS Code 1.141 Copilot Chat model picker behavior, including the thinking-effort picker and per-model configuration schema.
+- Synced with the 2026-10-17 DeepSeek-V4.1-Flash-1017 release: `deepseek-flash` keeps serving the latest model unchanged (no request change needed), the usage panel's English USD Flash prices were refreshed to the newly published official values, and the reversed V4 Pro routing plan was corrected across docs and tooltips (V4 Pro service continues with unchanged billing).
+- Noted the new peak-hours definition in the usage panel: Chinese public holidays are now excluded from peak windows.
 
 ## [1.0.3] - 2026-09-10
 

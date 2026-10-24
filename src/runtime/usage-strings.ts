@@ -52,12 +52,13 @@ export function usagePanelPricing(): UsagePricingView {
 function englishPricing(): UsagePricingView {
 	return {
 		unit: 'USD / 1M tokens',
-		peakHours: 'Mon-Fri 01:00-04:00 and 06:00-10:00 UTC are peak hours.',
+		peakHours:
+			'Mon-Fri 01:00-04:00 and 06:00-10:00 UTC are peak hours (Chinese public holidays excluded; weekends and holidays are off-peak in full).',
 		routing:
-			'The official English docs still publish Flash pricing under the retired deepseek-v4-flash entry. DeepSeek routes deepseek-v4-flash and deepseek-v4-flash-vision-exp to deepseek-flash for compatibility.',
+			'deepseek-flash serves DeepSeek-V4.1-Flash-1017 (2026-10-17 update). The retired names deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted and served by the same model. DeepSeek V4 Pro continues to be available after 2026-09-14 with unchanged billing.',
 		source: 'Prices change frequently. Check the official DeepSeek pricing page for the latest values.',
 		models: [
-			model('deepseek-flash', 'DeepSeek V4.1 Flash', ['$0.007', '$0.22', '$0.66'], ['$0.014', '$0.44', '$1.32']),
+			model('deepseek-flash', 'DeepSeek V4.1 Flash', ['$0.003', '$0.15', '$0.6'], ['$0.006', '$0.3', '$1.2']),
 			model('deepseek-v4-pro', 'DeepSeek V4-Pro', ['$0.022', '$0.66', '$1.98'], ['$0.044', '$1.32', '$3.96']),
 		],
 	};
@@ -66,9 +67,10 @@ function englishPricing(): UsagePricingView {
 function chinesePricing(): UsagePricingView {
 	return {
 		unit: '人民币 / 百万 tokens',
-		peakHours: '高峰时段为北京时间周一至周五 9:00-12:00、14:00-18:00。',
+		peakHours:
+			'高峰时段为北京时间周一至周五 9:00-12:00、14:00-18:00（不含中国法定节假日；周末与节假日全天为空闲时段）。',
 		routing:
-			'旧模型名 deepseek-v4-flash 与 deepseek-v4-flash-vision-exp 已下线，当前由 deepseek-flash 提供服务；2026-09-14 12:00 起，deepseek-v4-pro 也将暂时路由到 deepseek-flash。',
+			'deepseek-flash 当前对应 DeepSeek-V4.1-Flash-1017（2026-10-17 更新）；已下线的旧模型名 deepseek-v4-flash 与 deepseek-v4-flash-vision-exp 仍可调用，并由同一模型提供服务。应广大用户需求，DeepSeek V4 Pro 在 2026-09-14 后继续提供服务，计费方式不变。',
 		source: '价格变动频繁，请以 DeepSeek 官方价格页的最新公布信息为准。',
 		models: [
 			model('deepseek-flash', 'DeepSeek V4.1 Flash', ['0.02元', '1元', '4元'], ['0.04元', '2元', '8元']),

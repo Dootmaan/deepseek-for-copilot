@@ -84,8 +84,8 @@ export const MODEL_ALIASES: Record<string, string> = {
  * Built-in DeepSeek models exposed through the language model provider.
  *
 	 * DeepSeek V4.1 Flash is now the primary public flash model and natively supports image input.
-	 * The current `deepseek-v4-pro` endpoint remains available and will later be routed to V4.1
-	 * Flash by the DeepSeek backend until V4.1 Pro is released.
+ * The current `deepseek-v4-pro` endpoint remains available: DeepSeek announced on 2026-10-17
+ * that V4 Pro service (and its billing) continues unchanged.
  */
 export const MODELS: DeepSeekModel[] = [
 	{

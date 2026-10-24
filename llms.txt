@@ -4,7 +4,8 @@
 - Base URL: https://api.deepseek.com
 - Auth: Bearer $DEEPSEEK_API_KEY
 - Models: deepseek-flash, deepseek-v4-pro (1M context, 384K max output)
-- Compatibility aliases: deepseek-v4-flash, deepseek-v4-flash-vision-exp temporarily route to deepseek-flash
+- Compatibility aliases: deepseek-v4-flash, deepseek-v4-flash-vision-exp still accepted, served by deepseek-flash
+- deepseek-flash currently serves DeepSeek-V4.1-Flash-1017 (2026-10-17 update); V4 Pro service continues with unchanged billing
 - Thinking: { type: "enabled" | "disabled" } + reasoning_effort: "none" | "low" | "high" | "max"
 - Vision: deepseek-flash accepts JPEG, PNG, GIF, WebP images in user messages via Chat Completions content blocks
 - CoT: returned as reasoning_content (must be passed back across tool-call turns)

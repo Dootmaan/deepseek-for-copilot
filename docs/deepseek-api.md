@@ -10,12 +10,14 @@
 
 | Model | Version | Context | Max output | Image input | Concurrency | Current pricing |
 | --- | --- | --- | --- | --- | --- | --- |
-| `deepseek-flash` | DeepSeek-V4.1-Flash | 1M | 384K | Yes | 2500 | Off-peak: CNY 0.02 / 1 / 4; Peak: CNY 0.04 / 2 / 8 |
-| `deepseek-v4-pro` | DeepSeek-V4-Pro-0813 | 1M | 384K | No | 500 | Off-peak: CNY 0.15 / 4.5 / 13.5; Peak: CNY 0.30 / 9 / 27 |
+| `deepseek-flash` | DeepSeek-V4.1-Flash-1017 | 1M | 384K | Yes | 2500 | CNY off-peak: 0.02 / 1 / 4; peak: 0.04 / 2 / 8 · USD off-peak: $0.003 / 0.15 / 0.6; peak: $0.006 / 0.3 / 1.2 |
+| `deepseek-v4-pro` | DeepSeek-V4-Pro-0813 | 1M | 384K | No | 500 | CNY off-peak: 0.15 / 4.5 / 13.5; peak: 0.30 / 9 / 27 · USD off-peak: $0.022 / 0.66 / 1.98; peak: $0.044 / 1.32 / 3.96 |
 
-> `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` are retired public ids. DeepSeek temporarily routes both to `deepseek-flash` and bills them at Flash rates.
+> `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` are retired public ids. Both are still accepted and served by DeepSeek-V4.1-Flash-1017, billed at Flash rates.
 >
-> After 2026-09-14 12:00 Beijing time, and until V4.1 Pro is released, DeepSeek will also route `deepseek-v4-pro` requests to `deepseek-flash` and bill them at Flash rates.
+> Per the 2026-10-17 announcement, DeepSeek V4 Pro continues to be served after 2026-09-14 with unchanged billing; the previously planned routing of `deepseek-v4-pro` to Flash was reversed.
+>
+> Peak hours: Beijing time Mon-Fri 9:00-12:00 and 14:00-18:00 (UTC 01:00-04:00 and 06:00-10:00), excluding Chinese public holidays; weekends and holidays are off-peak in full.
 
 Inside this extension, the **Usage Details** panel surfaces these prices by time window:
 
@@ -23,6 +25,7 @@ Inside this extension, the **Usage Details** panel surfaces these prices by time
 - English UI: follows the official English pricing page and shows USD.
 - The panel renders three per-1M-token lines for each model: input (cache hit), input (cache miss), and output.
 - Peak/off-peak schedules are shown inline because DeepSeek now uses time-based billing.
+- `deepseek-flash` always points at the latest V4.1 Flash release (currently `DeepSeek-V4.1-Flash-1017`, per the 2026-10-17 update).
 
 ## Thinking mode
 

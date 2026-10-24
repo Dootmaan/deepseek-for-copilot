@@ -5,10 +5,10 @@ const en: Record<string, string> = {
 	// Model picker
 	'model.deepseek-flash.detail': 'Latest native multimodal model, 1M context',
 	'model.deepseek-flash.tooltip':
-		'DeepSeek V4.1 Flash — current public flash model with native image input, strong agent performance, and lower pricing.',
+		'DeepSeek V4.1 Flash — current public flash model with native image input, strong agent performance, and lower pricing. deepseek-flash always serves the latest release (currently DeepSeek-V4.1-Flash-1017).',
 	'model.deepseek-v4-pro.detail': 'Current Pro endpoint, 1M context',
 	'model.deepseek-v4-pro.tooltip':
-		'DeepSeek V4-Pro — current public pro endpoint with 1M context and selectable thinking effort. After 2026-09-14 12:00 Beijing time, DeepSeek will route it to V4.1 Flash until V4.1 Pro is released.',
+		'DeepSeek V4-Pro — current public pro endpoint with 1M context and selectable thinking effort. DeepSeek continues to serve V4 Pro after 2026-09-14 with unchanged billing.',
 	'model.custom.detail': 'Custom model',
 
 	// Auth
@@ -121,10 +121,10 @@ const en: Record<string, string> = {
 const zh: Record<string, string> = {
 	'model.deepseek-flash.detail': '最新原生多模态模型，100 万上下文',
 	'model.deepseek-flash.tooltip':
-		'DeepSeek V4.1 Flash — 当前公开的最新 Flash 模型，原生支持图片输入，Agent 性能更强，价格也更低。',
+		'DeepSeek V4.1 Flash — 当前公开的最新 Flash 模型，原生支持图片输入，Agent 性能更强，价格也更低。deepseek-flash 始终指向最新版本（当前为 DeepSeek-V4.1-Flash-1017）。',
 	'model.deepseek-v4-pro.detail': '当前 Pro 端点，100 万上下文',
 	'model.deepseek-v4-pro.tooltip':
-		'DeepSeek V4-Pro — 当前公开可调用的 Pro 端点，具备 100 万上下文与可选思考强度。自北京时间 2026-09-14 12:00 起，在 V4.1 Pro 发布前，DeepSeek 将把它路由到 V4.1 Flash。',
+		'DeepSeek V4-Pro — 当前公开可调用的 Pro 端点，具备 100 万上下文与可选思考强度。应广大用户需求，DeepSeek 在 2026-09-14 后继续提供 V4 Pro 服务，计费方式不变。',
 	'model.custom.detail': '自定义模型',
 
 	'auth.apiKeyRequiredDetail': '请运行“DeepSeek: Set API Key”进行配置。',
